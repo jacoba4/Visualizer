@@ -13,7 +13,7 @@ var framemax = 11;
 var currentsong;
 
 var params = {
-    song: "dubtrack.mp3",
+    song: "/drumtrack.mp3",
     move: false,
     speed: 0.1,
     bars: 64,
@@ -63,7 +63,7 @@ function loadTrack() {
     waveformdata = new Uint8Array(bufferlength);
     analyser.getByteTimeDomainData(waveformdata);
     setTimeout(enableButton,3000);
-    console.log(waveformdata);
+    //console.log(waveformdata);
   }
 
 function playSound(buffer) {
@@ -122,7 +122,7 @@ renderer.setSize(window.innerWidth,window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
 var gui = new dat.GUI();
-currentsong = gui.add( params, 'song', {Dub: '/dubtrack.mp3', Jazz: '/jazztrack.mp3', Piano: '/pianotrack.mp3', Rock: '/rocktrack.mp3', Solo: '/solotrack.mp3'});
+currentsong = gui.add( params, 'song', {Drum: '/drumtrack.mp3', Dub: '/dubtrack.mp3', Jazz: '/jazztrack.mp3', Piano: '/pianotrack.mp3', Rock: '/rocktrack.mp3', Solo: '/solotrack.mp3'});
 gui.add( params, 'move');
 gui.add( params, 'speed').min(0.1).max(0.5).step(.0001);
 gui.add( params, 'wireframe');
