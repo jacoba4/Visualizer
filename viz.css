@@ -1,0 +1,12 @@
+body {
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .ui {
+    position: absolute;
+  }
+  
+  button{
+    margin: 20px;
+  }
